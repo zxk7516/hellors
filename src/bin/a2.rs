@@ -4,7 +4,6 @@ use tokio::prelude::*;
 
 fn main(){
     let addr = "127.0.0.1:6142".parse().unwrap();
-    let client = TcpStream::connect(&addr);
 
 
     let client = TcpStream::connect(&addr).and_then(|stream| {
