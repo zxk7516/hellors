@@ -1,4 +1,4 @@
-trait Trait {
+pub trait Trait {
     fn display(self);
 }
 
