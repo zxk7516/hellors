@@ -14,11 +14,11 @@ impl Trait for i64 {
     }
 }
 
-pub fn gi32() -> impl Trait {
+pub fn gi32() -> impl std::fmt::Debug {
     5i32
 }
 
-pub fn gi64() -> impl Trait {
+pub fn gi64() -> impl std::fmt::Debug {
     5i64
 }
 
@@ -27,8 +27,7 @@ mod tests {
     use super::*;
     #[test]
     fn test_gi32() {
-        gi32().display();
-        gi64().display();
+        println!("{:?} {:?}", gi32(), gi64());
         assert!(true);
     }
 }
