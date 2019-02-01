@@ -34,9 +34,14 @@ pub fn gi64_dis() -> impl std::fmt::Debug {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    // use super::*;
+    use super::{gi32_dis, gi64_dis};
     #[test]
     fn test_gi32() {
+        for i in 0..7usize {
+            println!("{}", i.next_power_of_two())
+        }
+
         println!("{:?} {:?}", gi32_dis(), gi64_dis());
         assert!(true);
     }
